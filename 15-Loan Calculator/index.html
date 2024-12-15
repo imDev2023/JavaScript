@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Loan Calulator</h1>
+      <br />
+
+      <p class="loan-amo">
+        Loan Amount $
+        <input
+
+          type="number"
+          id="loan-amount"
+          min="1"
+          max="500000"
+          value="10000"
+          onchange="calcualteLoan()"
+        />
+      </p>
+      <br />
+      <p class="loan-amo">
+        Interest Rate %
+        <input
+          type="number"
+          id="Interest-Rate"
+          min="0"
+          max="100"
+          value="10"
+          step=".1"
+          onchange="calcualteLoan()"
+        />
+      </p>
+      <br />
+      <p class="loan-amo">
+        Months to Pay
+        <input type="number" id="Months-to-pay" min="6" max="48" value="12" 
+        onchange="calcualteLoan()"/>
+      </p>
+      <br />
+
+      <p>Monthly Payment : <span id="Monthly-payment"></span></p>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
