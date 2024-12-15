@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: coral;
+    font-family: cursive;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .form {
+    background-color: aliceblue;
+
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    margin: 10px;
+
+  }
+  .input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 30px;
+    text-align: center;
+    border: solid 4px green;
+    color: green;
+  }
+
+  .input::placeholder{
+    color: lightgray;
+    font-family: cursive;
+  }
+  .btn{
+    background-color: green;
+    color: white;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-family: cursive;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-size: 15px;
+      }
+
+    .score {
+        color: green;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: right;
+    }
