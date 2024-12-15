@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="date">
+        <button id="newdate"></button>
+    </div>
+    <div class="container">
+        <h1>Generate a <br><span>Random Password</span></h1>
+        <div class="display">
+            <input type="text" id="Password" placeholder="Password">
+            <img onclick="onCopy()" src="./images/copy.png" alt="">
+            
+        </div>
+        
+        <button onclick="createPassword()" id="generatePassword">
+            <img src="./images/generate.png">
+            Generate Password
+        </button>
+        
+    </div>
+    
+    
+    <script>
+
+        let password= document.getElementById('Password');
+        const date = document.getElementById('newdate');
+        const length = 12;
+
+        const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+        const number = '0123456789';
+        const symbol = '!@£$%&*(></;\|=+-_~)';
+
+        const allChars = upperCase + lowerCase + number + symbol;
+
+        function createPassword(){
+            let genPass = "";
+            genPass += upperCase[Math.floor(Math.random() * upperCase.length)];
+            genPass += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+            genPass += number[Math.floor(Math.random() * number.length)];
+            genPass += symbol[Math.floor(Math.random() * symbol.length)];
+
+            while(length > genPass.length){
+                genPass += allChars[Math.floor(Math.random() * allChars.length)]
+            }
+
+            password.value = genPass;
+        }
+
+        function onCopy(){
+            password.select();
+            document.execCommand("copy");
+
+        }
+
+        const nDate = new Date().toLocaleString();
+        date.innerText = nDate
+        
+        // const rDate = nDate.toLocaleString();
+        console.log(nDate)
+        
+    </script>
+</body>
+</html>
