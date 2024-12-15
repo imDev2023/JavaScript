@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1 class="heading">Temperature Convertor</h1>
+      <br />
+      <div class="temp-container">
+        <label for="celsius">Celsius:</label>
+        <input
+          onchange="computerTemp(event)"
+          type="number"
+          id="celsius"
+          placeholder="Enter Temperature"
+          class="input" name="celsius"
+        />
+      </div>
+      <div class="temp-container">
+        <label for="fahrenheit">Fahrenheit:</label>
+        <input
+          onchange="computerTemp(event)"
+          type="number"
+          id="fahrenheit"
+          placeholder="Enter Temperature"
+          class="input" name="fahrenheit"
+        />
+      </div>
+      <div class="temp-container">
+        <label for="kelvin">Kelvin:</label>
+        <input
+          onchange="computerTemp(event)"
+          type="number"
+          id="kelvin"
+          placeholder="Enter Temperature"
+          class="input" name="Kelvin"
+        />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
